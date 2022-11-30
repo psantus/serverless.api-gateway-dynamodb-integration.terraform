@@ -1,0 +1,6 @@
+profile        = "personalsso"
+region         = "eu-west-1"
+bucket         = "paul-terraform-state"
+dynamodb_table = "paul-terraform-lock"
+key            = "serverless-api-gateway-dynamodb-integration/terraform.tfstate"
+encrypt        = true
