@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "46bce6d9-f6c9-46dc-b4ce-6c5fc23a8c8f",
+		"name": "Pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Pets",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "YOUR_API_KEY",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n\t\"owner\": \"Paul\",\r\n\t\"name\": \"milou\",\r\n\t\"age\": 8,\r\n\t\"race\": \"dog\",\r\n\t\"gender\": \"M\"\r\n}, {\r\n\t\"owner\": \"Paul\",\r\n\t\"name\": \"catwoman\",\r\n\t\"age\": 5,\r\n\t\"race\": \"cat\",\r\n\t\"gender\": \"F\"\r\n}, {\r\n\t\"owner\": \"Pierre\",\r\n\t\"name\": \"milou\",\r\n\t\"age\": 9,\r\n\t\"race\": \"dog\",\r\n\t\"gender\": \"M\"\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://YOUR_API_URL.execute-api.eu-west-1.amazonaws.com/v1/pets",
+					"protocol": "https",
+					"host": [
+						"YOUR_API_URL",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"v1",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Pets",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "YOUR_API_KEY",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://YOUR_API_URL.execute-api.eu-west-1.amazonaws.com/v1/pets/Paul?maxAge=5",
+					"protocol": "https",
+					"host": [
+						"YOUR_API_URL",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"v1",
+						"pets",
+						"Paul"
+					],
+					"query": [
+						{
+							"key": "maxAge",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
